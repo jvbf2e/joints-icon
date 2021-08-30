@@ -1,0 +1,47 @@
+{
+  "private": false,
+  "name": "@jvbf2e/joints-icon",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vite",
+    "gen": "node ./scripts/generate.js && yarn prettier",
+    "pub": "sh ./scripts/publish.sh",
+    "prettier": "prettier ./packages -w",
+    "gen-dts": "node ./configs/morph.js",
+    "build": "sh ./scripts/build-comp.sh",
+    "build:entry": "rollup --config ./configs/rollup.config.js"
+  },
+  "keywords": [
+    "icon",
+    "svg",
+    "joints-icon"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "types"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@vue/compiler-sfc": "^3.2.6",
+    "esbuild": "^0.12.24",
+    "klaw-sync": "^6.0.0",
+    "ora": "^5.4.1",
+    "prettier": "^2.3.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "svgo": "^2.5.0",
+    "ts-morph": "^12.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2",
+    "vite": "^2.5.1",
+    "vue": "^3.2.6"
+  }
+}
